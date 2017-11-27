@@ -16,7 +16,7 @@ public class Lab1 extends JComponent {
 	public static MyFrame f;
 	public static String fileUrl;
 	public static String[] words;
-	public static Tree t;
+	public static TreeController tc;
 	public static int imgState = 0;
 	
 	public static void readInFile(){
@@ -30,8 +30,8 @@ public class Lab1 extends JComponent {
 				wordsStr = wordsStr.concat(replaceStr(str)+" ");
 			}
 			words = wordSplit(wordsStr);
-			t = new Tree(words);
-			DirectedGraph.createDirectedGraph(t, fileUrl, "Verdana", 12);
+			tc = new TreeController(new Tree(words));
+			DirectedGraph.createDirectedGraph(tc.t, fileUrl, "Verdana", 12);
 			in.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

@@ -13,7 +13,7 @@ public class TestRandomWalk {
 	
 	@Test
 	public void testCase1() {
-		String res = testLab.t.randomWalk();
+		String res = testLab.tc.randomWalk();
 		System.out.println(res);
 	}
 

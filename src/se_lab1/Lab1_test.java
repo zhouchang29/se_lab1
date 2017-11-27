@@ -15,7 +15,7 @@ public class Lab1_test {
 
 	public String fileUrl;
 	public String[] words;
-	public Tree t;
+	public TreeController tc;
 	public int imgState = 0;
 	
 	public void readInFile(){
@@ -29,7 +29,7 @@ public class Lab1_test {
 				wordsStr = wordsStr.concat(replaceStr(str)+" ");
 			}
 			words = wordSplit(wordsStr);
-			t = new Tree(words);
+			tc = new TreeController(new Tree(words));
 			//DirectedGraph.createDirectedGraph(t, fileUrl, "Verdana", 12);
 			in.close();
 		} catch (FileNotFoundException e) {

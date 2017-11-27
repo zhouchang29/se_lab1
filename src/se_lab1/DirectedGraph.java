@@ -14,7 +14,7 @@ public class DirectedGraph {
 	 * @param fontsize 字体大小
 	 * @return 成功标识(true)
 	 */
-	public static boolean createShortestDirectedGraph(Tree t, String fileUrl, 
+	public static boolean createShortestDirectedGraph(String fileUrl, 
 					String fontname, int fontsize, String shortest, PathGraphAssist pga) {
 		String[] shroads = shortest.split("\n");
 		for (int i = 0; i < shroads.length; i++) {
@@ -75,7 +75,7 @@ public class DirectedGraph {
 	 * @return 成功标识(true)
 	 */
 	
-	public static boolean createRandomDirectedGraph(Tree t, String fileUrl, String fontname, int fontsize, String random) {
+	public static boolean createRandomDirectedGraph(String fileUrl, String fontname, int fontsize, String random) {
 		String[] randomWords = random.split(" ");
 		String[] colors = {"#1abc9c", "#3498db", "#f1c40f", "#8e44ad", "#c0392b"};
 		File dotFile = new File(fileUrl.replace("txt", "dot"));

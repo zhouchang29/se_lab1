@@ -22,7 +22,7 @@ public class TestQueryBridgeWords {
 		String word2 = "provider";
 		String wantWord = "care";
 		String wantRes = "The bridge words from "+word1+" to "+word2+" are: "+wantWord+".";
-		String result = testLab.t.queryBridgeWords(word1, word2);
+		String result = testLab.tc.queryBridgeWords(word1, word2);
 		assertEquals(wantRes,result);
 	}
 	
@@ -31,7 +31,7 @@ public class TestQueryBridgeWords {
 		String word1 = "health";
 		String word2 = "";
 		String wantRes = "No "+word1+" or "+word2+" in the graph!";
-		String result = testLab.t.queryBridgeWords(word1, word2);
+		String result = testLab.tc.queryBridgeWords(word1, word2);
 		assertEquals(wantRes,result);
 	}
 	
@@ -40,7 +40,7 @@ public class TestQueryBridgeWords {
 		String word1 = "health";
 		String word2 = "!!!";
 		String wantRes = "No "+word1+" or "+word2+" in the graph!";
-		String result = testLab.t.queryBridgeWords(word1, word2);
+		String result = testLab.tc.queryBridgeWords(word1, word2);
 		assertEquals(wantRes,result);
 	}
 
@@ -49,7 +49,7 @@ public class TestQueryBridgeWords {
 		String word1 = "health";
 		String word2 = "specify";
 		String wantRes = "No "+word1+" or "+word2+" in the graph!";
-		String result = testLab.t.queryBridgeWords(word1, word2);
+		String result = testLab.tc.queryBridgeWords(word1, word2);
 		assertEquals(wantRes,result);
 	}
 	
@@ -58,7 +58,7 @@ public class TestQueryBridgeWords {
 		String word1 = "my";
 		String word2 = "dual";
 		String wantRes = "No bridge words from "+word1+" to "+word2+"!";
-		String result = testLab.t.queryBridgeWords(word1, word2);
+		String result = testLab.tc.queryBridgeWords(word1, word2);
 		assertEquals(wantRes,result);
 	}
 
@@ -69,7 +69,7 @@ public class TestQueryBridgeWords {
 		String wantWord1 = "worked";
 		String wantWord2 = "had";
 		String wantRes = "The bridge words from "+word1+" to "+word2+" are: "+wantWord1 + " and "  +wantWord2+".";
-		String result = testLab.t.queryBridgeWords(word1, word2);
+		String result = testLab.tc.queryBridgeWords(word1, word2);
 		assertEquals(wantRes,result);
 	}
 	

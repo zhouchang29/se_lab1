@@ -151,10 +151,10 @@ class shortestPanel extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					pga = new PathGraphAssist(Lab1.t.TreeNodes);
-					String shortest = Lab1.t.calcShortestPath(tfWord1.getText(), tfWord2.getText(),pga);
+					pga = new PathGraphAssist(Lab1.tc.t.TreeNodes);
+					String shortest = Lab1.tc.calcShortestPath(tfWord1.getText(), tfWord2.getText(),pga);
 					txRst.setText(shortest);
-					DirectedGraph.createShortestDirectedGraph(Lab1.t, Lab1.fileUrl, "Verdana", 12, shortest, pga);
+					DirectedGraph.createShortestDirectedGraph(Lab1.fileUrl, "Verdana", 12, shortest, pga);
 				} catch (CloneNotSupportedException e1) {
 					// TODO 自动生成的 catch 块
 					e1.printStackTrace();
@@ -199,7 +199,7 @@ class queryBridgePanel extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					lbRst.setText(Lab1.t.queryBridgeWords(tfWord1.getText(), tfWord2.getText()));
+					lbRst.setText(Lab1.tc.queryBridgeWords(tfWord1.getText(), tfWord2.getText()));
 				} catch (Exception err) {
 					
 				}
@@ -236,9 +236,9 @@ class randomPanel extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				String random = Lab1.t.randomWalk();
+				String random = Lab1.tc.randomWalk();
 				lbRst.setText(random);
-				DirectedGraph.createRandomDirectedGraph(Lab1.t, Lab1.fileUrl, "Verdana", 12, random);
+				DirectedGraph.createRandomDirectedGraph(Lab1.fileUrl, "Verdana", 12, random);
 			}
 			
 		});
@@ -270,7 +270,7 @@ class newTextPanel extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				try {
-					lbRst.setText(Lab1.t.generateNewText(taText.getText()));
+					lbRst.setText(Lab1.tc.generateNewText(taText.getText()));
 				} catch (Exception err) {
 					
 				}
